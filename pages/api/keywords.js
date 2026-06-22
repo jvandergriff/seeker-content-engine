@@ -1,8 +1,9 @@
-import { queryNotionDb, mapSeekerRow, mapBoombrandRow } from "../../lib/notion";
+import { queryNotionDb, mapSeekerRow, mapBoombrandRow, mapWildlifeConnectRow } from "../../lib/notion";
 
 const MAPPERS = {
-  seeker:    { dbEnvKey: "NOTION_DB_SEEKER",    mapper: mapSeekerRow },
-  boombrand: { dbEnvKey: "NOTION_DB_BOOMBRAND", mapper: mapBoombrandRow },
+  seeker:          { dbEnvKey: "NOTION_DB_SEEKER",          mapper: mapSeekerRow },
+  boombrand:       { dbEnvKey: "NOTION_DB_BOOMBRAND",       mapper: mapBoombrandRow },
+  wildlifeconnect: { dbEnvKey: "NOTION_DB_WILDLIFECONNECT", mapper: mapWildlifeConnectRow },
 };
 
 export default async function handler(req, res) {
